@@ -255,7 +255,7 @@ app.post("/fulfillment", async function (req, res) {
       },{
         "type": 0,
         "platform": "facebook",
-        "speech": "Happy to inform that your broken window is covered under your Homeowners policy <br><br> We'll need some more information to help you with the claim processing 
+        "speech": "Happy to inform that your broken window is covered under your Homeowners policy <br><br> We'll need some more information to help you with the claim processing "
         
       },{
         "type": 0,
