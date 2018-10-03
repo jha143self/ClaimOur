@@ -244,7 +244,7 @@ app.post("/fulfillment", async function (req, res) {
     return res.json(msg);
     //,
     //"image_url":"avatar/image/Auto.svg"
-  }else if(intentFrom === 'input.policy') {
+  } else if(intentFrom === 'input.policy') {
     msg = {
       "speech": "",
       "displayText": "",
@@ -267,6 +267,23 @@ app.post("/fulfillment", async function (req, res) {
       
     };
         return res.json(msg);
+  }
+ 
+  else if(intentFrom === 'input.date') {
+
+    lossDate=intentParam.date;
+    console.log(lossDate);
+    msg = {
+      "speech": "",
+      "displayText": "",
+      "messages": [{
+        "type": 0,
+        "platform": "facebook",
+        "speech": "Please upload the picture of the damaged glass?"
+      }]
+      
+    };
+    return res.json(msg);
   }
 
   else if(intentFrom === 'upload_image') {
