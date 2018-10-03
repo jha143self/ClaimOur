@@ -244,7 +244,7 @@ app.post("/fulfillment", async function (req, res) {
     return res.json(msg);
     //,
     //"image_url":"avatar/image/Auto.svg"
-  } else if(intentFrom === 'input.policy') {
+  }else if(intentFrom === 'input.policy') {
     msg = {
       "speech": "",
       "displayText": "",
@@ -255,7 +255,7 @@ app.post("/fulfillment", async function (req, res) {
       }]
       
     };
-    return res.json(msg);
+    
     setTimeout(function(){
       msg = {
         "speech": "",
@@ -268,7 +268,7 @@ app.post("/fulfillment", async function (req, res) {
         }]
         
       };
-      return res.json(msg);
+      
     },1000);
     
     setTimeout(function(){
@@ -283,9 +283,9 @@ app.post("/fulfillment", async function (req, res) {
         }]
         
       };
-      return res.json(msg);
+     
     },1000);
-    
+    return res.json(msg);
   }
  
   else if(intentFrom === 'input.date') {
